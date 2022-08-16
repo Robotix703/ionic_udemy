@@ -5,3 +5,8 @@ Ionic project made from udemy course
   ionic start : Pour démarrer un nouveau projet
 
   ionic generate : Pour générer un nouveau module
+
+# Liens utiles
+  https://ionic.io/ionicons
+
+  

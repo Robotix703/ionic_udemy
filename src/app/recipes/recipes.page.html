@@ -5,10 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list *ngFor="let recipe of recipes" [routerLink]="['./', recipe.id]">
-    <ion-avatar ion-slot="start">
-      <ion-img [src]="recipe.imageUrl"></ion-img>
-    </ion-avatar>
-    <ion-label> {{ recipe.title }} </ion-label>
+  <ion-list>
+    <app-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe"></app-recipe-item>
   </ion-list>
 </ion-content>
