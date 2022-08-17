@@ -42,7 +42,7 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: androidBuild
-        path: ./android
+        path: .
     - run: ls
     - name: set up JDK 11
       uses: actions/setup-java@v3
@@ -52,6 +52,6 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: chmod +x ./android/gradlew
+      run: chmod +x ./gradlew
     - name: Build with Gradle
-      run: ./android/gradlew build
+      run: ./gradlew build
