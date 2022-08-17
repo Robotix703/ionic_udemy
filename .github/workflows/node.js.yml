@@ -28,9 +28,9 @@ jobs:
     - run: ionic build
     - run: npx cap add android
     - run: npx cap sync
-    - run: ls
+    - run: ls android/
 
     - uses: actions/upload-artifact@v2
       with:
         name: androidBuild
-        path: /android
+        path: ./android
