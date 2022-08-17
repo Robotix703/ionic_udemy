@@ -35,6 +35,7 @@ jobs:
         path: ./android
 
   build-android:
+    needs: build-ionic
     runs-on: ubuntu-latest
 
     steps:
