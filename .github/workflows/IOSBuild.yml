@@ -44,10 +44,10 @@ jobs:
         with:
           name: ionicBuild
           path: .
-      - run: ls
       - name: Set Default Scheme
         run: |
           ls
+          pwd
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
           default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
           echo $default | cat >default
