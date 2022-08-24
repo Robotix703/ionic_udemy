@@ -34,7 +34,8 @@ jobs:
         path: ./ios
 
   build-ios:
-    needs:build-ionic
+    needs:
+      - build-ionic
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
 
