@@ -6,6 +6,8 @@ Ionic project made from udemy course
 
   ionic generate : Pour générer un nouveau module
 
+  ionic generate page <NOM> : Générer une nouvelle page
+
   ng serve : Lance l'application en local
 
 # Liens utiles
