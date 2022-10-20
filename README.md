@@ -8,7 +8,7 @@ Ionic project made from udemy course
 
   ionic generate page <NOM> : Générer une nouvelle page
 
-  ng serve : Lance l'application en local
+  ng serve / ionic serve : Lance l'application en local
 
 # Liens utiles
   https://ionic.io/ionicons
