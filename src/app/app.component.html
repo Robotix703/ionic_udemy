@@ -1,3 +1,30 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="main-content" menuId="main1">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Pair B&B
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="business" slot="start"></ion-icon>
+        <ion-label>Discover Places</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+        <ion-label>Your Bookings</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit" slot="start"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-content class="ion-padding">
+      <ion-router-outlet></ion-router-outlet>
+    </ion-content>
+  </div>
 </ion-app>
