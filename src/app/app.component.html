@@ -6,21 +6,24 @@
           Pair B&B
         </ion-title>
       </ion-toolbar>
+      <hr>
+      <ion-list>
+        <ion-menu-toggle menuId="main1">
+          <ion-item routerLink="/places/discover">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Discover Places</ion-label>
+          </ion-item>
+          <ion-item routerLink="/bookings">
+            <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+            <ion-label>Your Bookings</ion-label>
+          </ion-item>
+          <ion-item (click)="onLogout()" button>
+            <ion-icon name="exit" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
     </ion-header>
-    <ion-list>
-      <ion-item>
-        <ion-icon name="business" slot="start"></ion-icon>
-        <ion-label>Discover Places</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="checkbox-outline" slot="start"></ion-icon>
-        <ion-label>Your Bookings</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="exit" slot="start"></ion-icon>
-        <ion-label>Logout</ion-label>
-      </ion-item>
-    </ion-list>
   </ion-menu>
   <div class="ion-page" id="main-content">
     <ion-content class="ion-padding">
