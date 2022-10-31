@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Place } from './places.model';
 import { map, take } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -38,11 +39,15 @@ export class PlacesService {
     return this._places.asObservable();
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getPlace(id: string) {
     return this.places.pipe(take(1), map(places => {
       return {...places.find(p => p.id === id)}
     }));
+  }
+
+  addPlaces() : Observable<any>{
+    return this.http.post('url', {...this._places});
   }
 }
